@@ -1,0 +1,69 @@
+body {
+    width:90%;
+    margin: 0 auto;
+}
+
+#page {}
+
+
+#header {
+    height: 60px;
+    width: 100%;
+    background-color: rgb(156, 59, 248);
+    overflow: auto;
+}
+.sitenavi {
+    float: left;
+    min-width: 70%;
+}
+.extnavi {
+    float: left;
+    min-width: 30%
+}
+
+
+#navi {
+
+    border-color: whitesmoke;
+    border-width: thin;
+}
+
+.navi>li {
+    display: inline;
+    margin-right: 10px;   
+    color: white;
+}
+
+.navi a:link {
+    color: whitesmoke;
+    text-decoration: none;
+}
+.navi a:visited {
+    color: whitesmoke;
+}
+.navi a:hover {
+    color: white;
+}
+
+li.download {
+    height: 40px;
+    padding: 10px;
+  
+}
+li.download>a:link {
+    color:rgba(255, 217, 0, 0.856)
+}
+li.download>a:visited {
+    color:rgba(255, 217, 0, 0.856);
+    border-width: 2px;
+    border-color:rgba(255, 217, 0, 0.856);
+    border-radius: 3px;
+}
+li.download>a:hover {
+    color:rgba(10, 8, 0, 0.856);
+    border-width: 2px;
+    border-color: black;
+    border-radius: 3px;
+}
+
+
