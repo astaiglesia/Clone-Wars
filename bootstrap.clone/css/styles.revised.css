@@ -1,8 +1,8 @@
 /* html,  */
 
 body {
-    height: 100%;
-    max-width: 100%
+    /* height: 100%;
+    max-width: 100% */
 
     background-color: white;
 }
@@ -96,10 +96,10 @@ body {
         
 /* ---------- main content / global wrapper ------------ */
 .wrapper {
-    /* background: cornflowerblue; */
+    background: cornflowerblue;
     width: 100%
-    max-width: 960px;
-    margin: 0 auto;
+    max-width: 1200px;
+    /* margin: 0 auto; */
 }
 
 
@@ -123,148 +123,51 @@ body {
 
 /* ---- TYP container  */
         
-.container {
-    background-color: lightblue;    
-    width: 100%
-    max-width: 960px;
-    margin: 0 auto;
+      
 
-    display: flex;                      /*parent props*/
-    flex-flow: row wrap-reverse ;
-}
+
+    div > h2 {
+        font-size: 42px; 
+        /* color: rgb(54, 54, 54); */
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+    }
+    .summary {
+        font-size: 20px; 
+        color: rgb(54, 54, 54);
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    .details {
+        font-size: 16px; 
+        color: rgb(54, 54, 54);
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        margin-right: 35px !important;
+    }
+    .boxbutton {
+        margin-right: 250px !important;
+        text-align: center;
+
+        font-size: 20px; 
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+        border: 1px solid rgb(8, 8, 250);
+        border-radius: 5px;
+    }
         
-
-/* ------ install container */
-   
-    .installbox1 {
-        background-color: lightpink; 
-        padding: 20px 75px 20px 50px;
-    
-        flex: 1;                          /*child props*/
-
-        display: flex;                      /*parent props*/
-        flex-direction: column;  
-    }
-
-        .installbox1>div {               /* nested child properties*/       
-            /* background-color: lightsteelblue; */
-            border: 1px solid red;
-            margin-right: 15px;
-            padding: 5px;
-            flex: 1;
-
+        .boxbutton a:link {
+            color: rgb(8, 8, 250);
+            text-decoration: none;
+        }
+        .boxbutton a:visited {
+            color: rgb(8, 8, 250);
+        }
+        .boxbutton a:hover {
+            color: white;
+            background-color: rgb(8, 8, 250);
         }
 
-        .h2 {
-            font-size: 42px; 
-            color: rgb(54, 54, 54);
-            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+/* ### Fine-tune the buttons */
 
-        }
-        .summary {
-            font-size: 20px; 
-            color: rgb(54, 54, 54);
-            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-        }
-        .details {
-            font-size: 16px; 
-            color: rgb(54, 54, 54);
-            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-            margin-right: 35px !important;
-        }
-        .docsbutton {
-            margin-right: 250px !important;
-            text-align: center;
-
-            font-size: 20px; 
-            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-
-            border: 1px solid rgb(8, 8, 250);
-            border-radius: 5px;
-        }
-            
-            .docsbutton a:link {
-                color: rgb(8, 8, 250);
-                text-decoration: none;
-            }
-            .docsbutton a:visited {
-                color: rgb(8, 8, 250);
-            }
-            .docsbutton a:hover {
-                color: white;
-                background-color: rgb(8, 8, 250);
-            }
-
-
-    .installbox2 {
-        background-color: orange;
-        padding: 110px 30px 125px 10px;
-        flex: 1;                           /* child props */
-
-        display: flex;                      /*parent props*/
-        flex-direction: column;
-        flex-wrap: wrap;
-    }
-
-        .commandlines {                   
-            background-color:whitesmoke;
-            padding: 10px;
-            margin: 10px;
-
-            flex: 1;                           /* child props */
-
-            display: flex;                      /*parent props*/
-            align-items: center;
-        }
-
-        .commandlines code {                   
-            padding: 3px 30px 3px 5px;
-            flex: 1;                           /* child props */
-        }
-        .commandlines button {    
-            
-            
-            background-color: white;   
-            border: 1px solid rgb(8, 8, 250);
-            border-radius: 5px;
-
-            padding: 3px 30px 3px 5px;
-            flex: 1;                           /* child props */
-        }
-
-
-
-/* ------ delivr container */
-
-section {
-    background-color: lightpink; 
-    padding: 20px 75px 20px 50px;
-
-    flex: 1;                          /*child props*/
-
-    display: flex;                      /*parent props*/
-    flex-direction: column;  
-}
-
-
-.one {               /* nested child properties*/       
-    /* background-color: lightgoldenrodyellow; */
-    border: 1px solid red;
-    margin-right: 15px;
-    padding: 5px;
-    flex: 1;
-
-}
-
-
-.two {               /* child properties*/       
-    /* background-color: rgb(250, 183, 250); */
-    border: 1px solid rgb(0, 255, 21);
-    margin-right: 15px;
-    padding: 5px;
-    flex: 1;
-
-}
 
 /* ------ icons container */
 .L1 {
@@ -296,3 +199,145 @@ section {
     flex: 1;
 
 }
+
+
+
+section {                /*TYP container */
+    /* background-color: lightblue;     */
+    width: 100%
+    max-width: 600px;
+    /* margin: 0 auto; */
+    padding-top: 5%;
+    padding-bottom: 5%;
+
+
+    display: flex;                      /*parent props*/
+    flex-flow: row wrap;
+}
+    .one {
+        /* background-color: lightsteelblue; */
+        width: 100%;
+        /* max-width: 480px; */
+    }
+
+    .two {
+        background-color: lightslategrey;
+        border: 1px solid rgb(0, 255, 21);
+        width: 100%;
+        /* max-width: 480px; */
+        /* padding: 125x 0px 25px 0px; */
+        /* margin: 25x 0px 25px 0px; */
+        flex: 1;                           /* child props */
+    }
+
+    .two img {
+        /* border: 1px solid black; */
+        width: 100%;
+        height: auto;
+        padding-top: 25px
+    }
+
+    .one > div {               /* nesting child properties -> all div children of a class one*/       
+
+        /* border: 1px solid red; */
+        margin-right: 15px;
+        padding: 5px;
+        flex: 1;
+
+        display: flex;                      /*parent props*/
+        flex-flow: row wrap-reverse ;
+    } 
+
+
+    /* .two > div {               nesting child properties -> install & deliver        */
+        /* background-color: rgb(250, 183, 250); */
+        /* border: 1px solid rgb(0, 255, 21); */
+        /* margin-right: 15px; */
+        /* padding: 5px; */
+        /* flex: 1; */
+
+        /* display: flex;                      parent props */
+        /* flex-flow: row wrap-reverse ; */
+    /* } */
+
+
+
+    .code {          /* install and deliver code box container */
+        background-color: lightyellow;
+        border: 1px solid rgb(0, 255, 21);
+        /* padding: 125x 0px 25px 0px; */
+        /* margin: 25x 0px 25px 0px; */
+        flex: 1;                           /* child props */
+
+        display: flex;                      /*parent props*/
+        flex-flow: column wrap;
+        
+    }
+
+            .codecopy {                   
+                background-color:whitesmoke;
+                /* padding: 10px; */
+                /* margin: 10px; */
+
+                flex: 1;                           /* child props */
+
+                display: flex;                      /*parent props*/
+                justify-content: space-between;
+            }
+
+                    .codecopy code {                   
+                        /* padding: 3px 30px 3px 5px; */
+                        flex: 1;                           /* child props */
+                    }
+
+                    .codecopy script {                   
+                        /* padding: 3px 30px 3px 5px; */
+                        flex: 1; 
+                        overflow: scroll                          /* child props */;
+                    }
+
+                    .codecopy button {    
+                        background-color: white;   
+                        border: 1px solid rgb(8, 8, 250);
+                        border-radius: 5px;
+
+                        /* padding: 3px 30px 3px 5px; */
+                        flex: 1;                           /* child props */
+                    }
+
+footer {
+    max-width: 100%;
+    min-width: 50%;
+    background-color: rgb(136, 45, 240);
+
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
