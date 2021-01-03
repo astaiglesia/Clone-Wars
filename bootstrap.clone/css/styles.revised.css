@@ -1,13 +1,6 @@
-/* html,  */
-
 body {
-    /* height: 100%;
-    max-width: 100% */
-
     background-color: white;
 }
-
-
 
 /* ------- header content ------- */
 .container-head {
@@ -20,7 +13,6 @@ body {
     flex-flow: row nowrap;
     align-items: baseline;
 }
-
     /* box level1 */
     .container-head .box-container-sitenavi {
         /* border: 2px solid rgb(33, 61, 219); */
@@ -46,7 +38,6 @@ body {
         flex-wrap: nowrap;
         overflow: hidden;
     }
-
         /* box level2 */
         .container-head .box-container-sitenavi > a {
             /* border: 2px solid rgb(245, 21, 21); */
@@ -91,46 +82,164 @@ body {
         }
 
 
-
-
-        
-/* ---------- main content / global wrapper ------------ */
+/* ---------- main content / wrapper ------------ */
 .wrapper {
-    background: cornflowerblue;
+    /* background: cornflowerblue; */
     width: 100%
     max-width: 1200px;
     /* margin: 0 auto; */
-}
+ }
 
+ /* ---- main banner ---- */
+    section.main {                /*TYP container */
+        background-color: rgb(230, 173, 222);    
+        width: 100%;
+        /* max-width: 1200px; */
+        /* margin: 0 auto; */
+        padding-top: 5%;
+        padding-bottom: 5%;
 
-/* ------ outerbox1 - main banner */
-    /* .outerbox1 { */
-        /* border: 2px solid greenyellow;     */
-        /* max-width: 100%; */
-        /* min-width: 50%; */
-        /* background: linear-gradient(165deg, whitesmoke 60%, white 60%); */
-        /* padding-top: 40px; */
-
-        /* display: flex;                      parent props */
-        /* flex-flow: row nowrap; */
-    /* } */
-        /* .outerbox1 .innerbox1 { */
-            /* border: 3px solid red; */
-        /* } */
-        /* .outerbox1 .innerbox2 { */
-            /* border: 3px solid rgb(0, 42, 255); */
-        /* } */
-
-/* ---- TYP container  */
+        display: flex;                      /*parent props*/
+        flex-flow: row wrap-reverse;
+    }
+    .boxmain-one {
+        /* background-color: rgb(208, 222, 176); */
+        border: 1px solid red;
+        width: 100%;
+        margin-right: 15px;
+        padding: 5px;
         
-      
+        flex: 1;                            /* child props */
+        
+        display: flex;                      /*parent props*/
+        flex-flow: column nowrap;
+    }
+        .boxmain-one > div {
+            /* background-color: rgb(208, 222, 176); */
+            border: 1px solid rgb(3, 5, 138);
+            width: 100%;
+            margin-right: 15px;
+            padding: 5px;
+            
+            flex: 1;                            /* child props */
+        }
+        .boxmain-one > .mainbuttons {
+            /* background-color: rgb(208, 222, 176); */
+            /* border: 1px solid rgb(3, 5, 138); */
+            width: 100%;
+            margin-right: 15px;
+            padding: 5px;
+            
+            flex: 1;                            /* child props */
+                    
+            display: flex;                      /*parent props*/
+            /* flex-flow: row nowrap; */
+        }
+    .boxmain-two {
+        border: 1px solid rgb(0, 255, 21);
+        width: 100%;
 
+        flex: 1;                           /* child props */
+    }
 
+ /* ----- TYP container sections */
+ section {                 
+    background-color: lightblue;    
+    width: 100%
+    max-width: 600px;
+    /* margin: 0 auto; */
+    padding-top: 5%;
+    padding-bottom: 5%;
+
+    display: flex;                      /*parent props*/
+    flex-flow: row wrap;
+ }
+    .one {
+        /* background-color: lightsteelblue; */
+        width: 100%;
+        margin-right: 15px;
+        padding: 5px;
+        
+        flex: 1;
+    }
+    .two {
+        /* background-color: lightslategrey; */
+        /* border: 1px solid rgb(0, 255, 21); */
+        width: 100%;
+
+        flex: 1;                           /* child props */
+    }
+    .two img {
+        /* border: 1px solid black; */
+        width: 100%;
+        height: auto;
+        padding-top: 25px
+    }
+    .one > div {               /* nesting child properties -> all div children of a class one*/       
+        /* border: 1px solid red; */
+        margin-right: 15px;
+        padding: 5px;
+        flex: 1;
+
+        display: flex;                      /*parent props*/
+        flex-flow: row wrap-reverse ;
+    } 
+    .code {          /* install and deliver code box container */
+        background-color: lightyellow;
+        border: 1px solid rgb(0, 255, 21);
+        /* padding: 125x 0px 25px 0px; */
+        /* margin: 25x 0px 25px 0px; */
+        flex: 1;                           /* child props */
+
+        display: flex;                      /*parent props*/
+        flex-flow: column wrap;
+        
+    }
+        .codecopy {                   
+            background-color:whitesmoke;
+            /* padding: 10px; */
+            /* margin: 10px; */
+
+            flex: 1;                           /* child props */
+
+            display: flex;                      /*parent props*/
+            justify-content: space-between;
+        }
+                .codecopy code {                   
+                    /* padding: 3px 30px 3px 5px; */
+                    flex: 1;                           /* child props */
+                }
+                .codecopy script {                   
+                    /* padding: 3px 30px 3px 5px; */
+                    flex: 1; 
+                    overflow: scroll                          /* child props */;
+                }
+                .codecopy button {    
+                    background-color: white;   
+                    border: 1px solid rgb(8, 8, 250);
+                    border-radius: 5px;
+
+                    /* padding: 3px 30px 3px 5px; */
+                    flex: 1;                           /* child props */
+                }
+
+ /* ---- flexbox class properties  */
+    /* main banner */
+    .tagline {
+        font-size: 48px; 
+        color: rgb(54, 54, 54);
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    .mainsummary {
+        font-size: 28px; 
+        color: rgb(54, 54, 54);
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    /* TYP containers  */
     div > h2 {
         font-size: 42px; 
         /* color: rgb(54, 54, 54); */
         font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-
     }
     .summary {
         font-size: 20px; 
@@ -152,8 +261,7 @@ body {
 
         border: 1px solid rgb(8, 8, 250);
         border-radius: 5px;
-    }
-        
+    }  
         .boxbutton a:link {
             color: rgb(8, 8, 250);
             text-decoration: none;
@@ -166,159 +274,50 @@ body {
             background-color: rgb(8, 8, 250);
         }
 
-/* ### Fine-tune the buttons */
+ /* ### Fine-tune the buttons */
 
-
-/* ------ icons container */
-.L1 {
-    /* background-color: lightpink;  */
-    padding: 20px 75px 20px 50px;
-
-    flex: 1;                          /*child props*/
-
-    display: flex;                      /*parent props*/
-    flex-direction: column;  
-}
-
-
-.one {               /* nested child properties*/       
-    /* background-color: lightgoldenrodyellow; */
-    /* border: 1px solid red; */
-    margin-right: 15px;
-    padding: 5px;
-    flex: 1;
-
-}
-
-
-.two {               /* child properties*/       
-    /* background-color: rgb(250, 183, 250);
-    border: 1px solid rgb(0, 255, 21); */
-    margin-right: 15px;
-    padding: 5px;
-    flex: 1;
-
-}
-
-
-
-section {                /*TYP container */
-    /* background-color: lightblue;     */
-    width: 100%
-    max-width: 600px;
-    /* margin: 0 auto; */
-    padding-top: 5%;
-    padding-bottom: 5%;
-
-
-    display: flex;                      /*parent props*/
-    flex-flow: row wrap;
-}
-    .one {
-        /* background-color: lightsteelblue; */
-        width: 100%;
-        /* max-width: 480px; */
-    }
-
-    .two {
-        background-color: lightslategrey;
-        border: 1px solid rgb(0, 255, 21);
-        width: 100%;
-        /* max-width: 480px; */
-        /* padding: 125x 0px 25px 0px; */
-        /* margin: 25x 0px 25px 0px; */
-        flex: 1;                           /* child props */
-    }
-
-    .two img {
-        /* border: 1px solid black; */
-        width: 100%;
-        height: auto;
-        padding-top: 25px
-    }
-
-    .one > div {               /* nesting child properties -> all div children of a class one*/       
-
-        /* border: 1px solid red; */
-        margin-right: 15px;
-        padding: 5px;
-        flex: 1;
-
-        display: flex;                      /*parent props*/
-        flex-flow: row wrap-reverse ;
-    } 
-
-
-    /* .two > div {               nesting child properties -> install & deliver        */
-        /* background-color: rgb(250, 183, 250); */
-        /* border: 1px solid rgb(0, 255, 21); */
-        /* margin-right: 15px; */
-        /* padding: 5px; */
-        /* flex: 1; */
-
-        /* display: flex;                      parent props */
-        /* flex-flow: row wrap-reverse ; */
-    /* } */
-
-
-
-    .code {          /* install and deliver code box container */
-        background-color: lightyellow;
-        border: 1px solid rgb(0, 255, 21);
-        /* padding: 125x 0px 25px 0px; */
-        /* margin: 25x 0px 25px 0px; */
-        flex: 1;                           /* child props */
-
-        display: flex;                      /*parent props*/
-        flex-flow: column wrap;
-        
-    }
-
-            .codecopy {                   
-                background-color:whitesmoke;
-                /* padding: 10px; */
-                /* margin: 10px; */
-
-                flex: 1;                           /* child props */
-
-                display: flex;                      /*parent props*/
-                justify-content: space-between;
-            }
-
-                    .codecopy code {                   
-                        /* padding: 3px 30px 3px 5px; */
-                        flex: 1;                           /* child props */
-                    }
-
-                    .codecopy script {                   
-                        /* padding: 3px 30px 3px 5px; */
-                        flex: 1; 
-                        overflow: scroll                          /* child props */;
-                    }
-
-                    .codecopy button {    
-                        background-color: white;   
-                        border: 1px solid rgb(8, 8, 250);
-                        border-radius: 5px;
-
-                        /* padding: 3px 30px 3px 5px; */
-                        flex: 1;                           /* child props */
-                    }
-
-footer {
+/* ---- footer ----- */
+ footer {
+    background-color: whitesmoke;
     max-width: 100%;
     min-width: 50%;
-    background-color: rgb(136, 45, 240);
-
+    padding: 35px ;
 
     display: flex;
     flex-flow: column nowrap;
-    justify-content: flex-start;
-}
+ }
+    footer ul {
+        /* border: 1px solid purple; */
+        list-style-type: none;
 
+        flex: 1;                           /* child props */
 
+        display: flex;                      /* parent props */
+        flex-flow: row nowrap;
+        /* justify-content: flex-start; */
+    }
+    footer ul a {
+        /* border: 1px solid rgb(0, 255, 21); */
+        color: rgb(54, 54, 54);
+        font-size: 16px;
+        /* text-align: center; */
+        display: block;
+        padding: 10px;
+    }
+    footer div {
+        /* border: 1px solid purple; */
+        color: rgb(54, 54, 54);
+        font-size: 14px;
+        padding-left: 2.5%;
 
-
+        
+        flex: 1;                           /* child props */
+    }
+    footer div a {
+        /* border: 1px solid rgb(0, 255, 21); */
+        color: rgb(54, 54, 54);
+        font-size: 14px;
+    }
 
 
 
