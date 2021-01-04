@@ -1,342 +1,412 @@
 body {
     background-color: white;
 }
-
-/* ------- header content ------- */
-.container-head {
-    max-width: 100%;
-    min-width: 50%;
-    background-color: rgb(136, 45, 240);
-
-
-    display: flex;
-    flex-flow: row nowrap;
-    align-items: baseline;
-}
-    /* box level1 */
-    .container-head .box-container-sitenavi {
-        /* border: 2px solid rgb(33, 61, 219); */
-        background-color: inherit
-
-        padding: 20px 10px 20px 10px;
-
-        order: 1;
-        flex: 2;
-        flex-wrap: nowrap;
-
-        overflow: hidden;
-    }
-    .container-head .box-container-headlinks {
-        /* border: 2px solid green; */
-        background-color: inherit;
-        padding: 20px 10px 20px 20px;
-        justify-content:flex-end;
-    
-
-        order: 2;
-        flex: 1;
-        flex-wrap: nowrap;
-        overflow: hidden;
-    }
-        /* box level2 */
-        .container-head .box-container-sitenavi > a {
-            /* border: 2px solid rgb(245, 21, 21); */
-            background-color: inherit;
-            padding: 10px;
-            text-align: center;
-        }
-        .container-head .box-container-headlinks > a {
-            /* border: 2px solid rgb(250, 250, 250); */
-            background-color: inherit;
-            padding: 10px;
-            text-align: center;
-        }
-        .container-head .box-container-headlinks .dl {
-            color: rgb(226, 241, 11);
-            border: 1px solid rgb(226, 241, 11);
-            border-radius: 5px;
-            background-color: inherit;
-            padding: 5px 15px 5px 15px;
-            text-align: center;
-        }
-        /* links and link actions */
-        div.container-head a {
-            margin: 3px;
-            padding: 5px;
-        }
-            .container-head a:link {
-                color: whitesmoke;
-                text-decoration: none;
-            }
-            .container-head a:visited {
-                color: rgba(240, 238, 238, 0.836);
-            }
-            .container-head a:hover {
-                color: white;
-                font-weight: bold;
-            }
-        div.container-head.box-container-headlinks.dl a:hover {
-            background-color: rgb(226, 241, 11);
-            border:  rgb(226, 241, 11);
-            color: rgb(136, 45, 240);
-        }
-
-
-/* ---------- main content / wrapper ------------ */
-.wrapper {
-    /* background: cornflowerblue; */
-    width: 100%
-    max-width: 1200px;
-    /* margin: 0 auto; */
- }
-
- /* ---- main banner ---- */
-    section.main {                /*TYP container */
-        background-color: rgb(230, 173, 222);    
+    /* ------- header content ------- */            /* refine header responsiveness, links */
+    header {
         width: 100%;
         /* max-width: 1200px; */
+        /* margin: 0 auto; */
+        /* min-width: 768px; */
+        background-color: rgb(136, 45, 240);
+        padding: 10px 15px 10px 15px;
+
+
+        display: flex;                      /*parent props*/
+        flex-flow: row nowrap;
+        overflow: hidden;
+        justify-content: space-between;
+    }
+        /* box level1 */
+        header .box-container-sitenavi {
+            /* border: 2px solid rgb(167, 4, 4); */
+            background-color: inherit;
+            /* min-width: auto; */
+            flex: 1;                            /* child props */
+            
+            display: flex;                      /*parent props*/
+            flex-flow: row nowrap;
+            overflow: hidden;
+            justify-content: flex-start;
+            align-items: center;
+        }
+        header .box-container-headlinks {
+            /* border: 2px solid rgb(243, 227, 6); */
+            background-color: inherit;
+            min-width: auto;
+            
+            /* padding: 20px 10px 20px 20px; */
+
+            font-size: 12px;
+        
+            flex: 1;                            /* child props */
+            
+            display: flex;                      /*parent props*/
+            flex-flow: row nowrap;
+            overflow: hidden;
+            justify-content: flex-end;
+            align-items: center;
+        }
+            /* box level2 */
+            header .box-container-sitenavi > a {
+                /* border: 2px solid rgb(245, 21, 21); */
+                background-color: inherit;
+                padding: 10px;
+                text-align: center;
+            }
+            header .box-container-headlinks > a {
+                /* border: 2px solid rgb(250, 250, 250); */
+                background-color: inherit;
+                padding: 10px;
+                text-align: center;
+            }
+            header .box-container-headlinks .dl {
+                color: rgb(226, 241, 11);
+                font-size: 16px;
+                border: 1px solid rgb(226, 241, 11);
+                border-radius: 5px;
+                background-color: inherit;
+                padding: 3px 10px 3px 10px;
+
+            }
+            /* links and link actions */         /* ### fine tune links -> insert logos*/
+                header a:link {
+                    color: whitesmoke;
+                    text-decoration: none;
+                }
+                header a:visited {
+                    color: rgba(240, 238, 238, 0.836);
+                }
+                header a:hover {
+                    color: white;
+                    font-weight: bold;
+                }
+                .dl a:hover {
+                    background-color: rgb(226, 241, 11);
+                    border:  rgb(226, 241, 11);
+                    color: black;
+                }
+
+
+    /* ---------- main content / wrapper ------------ */
+    .wrapper {
+        /* background: cornflowerblue; */
+        width: 100%;
+        /* min-width: 100px; */
+        margin: 0 auto;
+    }
+
+    /* ---- main banner ---- */    /* ### resize boxes, add background gradient, fine tune spacing and font size */
+
+    /* ----- repeating attributes */
+    section {                 
+        /* background-color: lightblue;     */
+        width: 100%
+        /* max-width: 600px; */
         /* margin: 0 auto; */
         padding-top: 5%;
         padding-bottom: 5%;
 
         display: flex;                      /*parent props*/
-        flex-flow: row wrap-reverse;
+        flex-flow: row wrap;
     }
-    .boxmain-one {
-        /* background-color: rgb(208, 222, 176); */
-        border: 1px solid red;
-        width: 100%;
-        margin-right: 15px;
-        padding: 5px;
+        .main {
+            background: linear-gradient(165deg, whitesmoke 60%, white 60%);
+            flex-flow: row wrap-reverse;
+        }
+        .one {
+            /* background-color: lightsteelblue; */
+            width: 100%;
+            margin-right: 15px;
+            padding: 5px;
+            
+            flex: 1;
+        }
+        .two {
+            /* background-color: lightslategrey; */
+            /* border: 1px solid rgb(0, 255, 21); */
+            width: 100%;
+
+            flex: 1.25;                           /* child props */
+        }
+
+            .two img {
+                /* border: 1px solid black; */
+                width: 100%;
+                height: auto;
+                padding-top: 25px
+            }
+            .one > div {          
+                /* border: 1px solid red; */
+                margin-right: 15px;
+                padding: 5px;
+                flex: 1;
+
+                display: flex;                      /*parent props*/
+                flex-flow: row wrap-reverse ;
+            } 
+        .blurb {
+            /* background-color: lightsteelblue; */
+            width: 100%;
+            margin-right: 15px;
+            padding-top: 50px;
+            
+            flex: 1.5;
+        }
+        .banner {
+            /* background-color: lightslategrey; */
+            /* border: 1px solid rgb(0, 255, 21); */
+            width: 100%;
+            padding-top: 75px;
+
+            flex: 1;                           /* child props */
+        }
+            .banner > div{
+                min-width: 300px;
+                min-height: 300px;
+            }
+        .code {          /* ### fix code box containers */
+            background-color: lightyellow;
+            border: 1px solid rgb(0, 255, 21);
+            /* padding: 125x 0px 25px 0px; */
+            /* margin: 25x 0px 25px 0px; */
+            flex: 1.25;                           /* child props */
+
+            display: flex;                      /*parent props*/
+            flex-flow: column wrap;
+        }
+            .codecopy {                   
+                background-color:whitesmoke;
+                /* padding: 10px; */
+                /* margin: 10px; */
+
+                flex: 1;                           /* child props */
+
+                display: flex;                      /*parent props*/
+                justify-content: space-between;
+            }
+                    .codecopy code {                   
+                        /* padding: 3px 30px 3px 5px; */
+                        flex: 1;                           /* child props */
+                    }
+                    .codecopy script {                   
+                        /* padding: 3px 30px 3px 5px; */
+                        flex: 1; 
+                        overflow: scroll                          /* child props */;
+                    }
+                    .codecopy button {    
+                        background-color: white;   
+                        border: 1px solid rgb(8, 8, 250);
+                        border-radius: 5px;
+
+                        /* padding: 3px 30px 3px 5px; */
+                        flex: 1;                           /* child props */
+                    }
+        .boxbutton {
+            margin-right: 250px !important;
+            text-align: center;
+
+            font-size: 20px; 
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+            border: 1px solid rgb(8, 8, 250);
+            border-radius: 5px;
+        }  
+            .boxbutton a:link {
+                color: rgb(8, 8, 250);
+                text-decoration: none;
+            }
+            .boxbutton a:visited {
+                color: rgb(8, 8, 250);
+            }
+            .boxbutton a:hover {
+                color: white;
+                background-color: rgb(8, 8, 250);
+            }
+                /* ### Fine-tune the buttons */
+    /* ---- unique box class attributes  */
+        /* main banner */
+        .tagline {
+            font-size: 56px; 
+            color: black;
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-weight: bold;
+            line-height: 1;
+            display: inline-block;
+            vertical-align: top;
+        }
+        .mainsummary {
+            font-size: 21px; 
+            color: black;
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        .mainbuttons {
+            /* border: 1px solid rgb(8, 8, 250); */
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            text-decoration: none;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            /* text-align: center; */
+
+            display: flex;                      /* parent properties*/
+            flow-flex: row nowrap;
+            justify-content: flex-start;
+        }  
+            .mainbuttons > div {
+                text-align: center;
+                max-width: 175px;
+
+                font-size: 20px; 
+                font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                padding: 10px;
+    
+                border: 1px solid gray;
+                border-radius: 5px;
+                
+                display:block;
+
+                flex:1
+            }
+            /* .mainbuttons a {
+
+            } */
+                .startbutton {
+                    background-color: rgb(136, 45, 240);
+                    margin-right: 5px;
+
+                }
+                .download {
+                    background: inherit;
+                    margin-leftt: 5px
+                }
+                .startbutton a:link {
+
+                    color: white;
+                    text-decoration: none;
+                }
+                .startbutton a:visited {
+                    color: rgb(8, 8, 250);
+                }
+                .startbutton a:hover {
+                    color: white;
+                    background-color: rgb(8, 8, 250);
+                } 
+                .download a:link {
+                    background: inherit;
+                    color: gray;
+                    text-decoration: none;
+                }
+                .download a:visited {
+                    color:gray;
+                }
+                .download a:hover {
+                    color: white;
+                    background-color: gray;
+                }
         
-        flex: 1;                            /* child props */
-        
-        display: flex;                      /*parent props*/
+        .fineprint {
+            margin-bottom: 20px;
+
+            font-size: 16px; 
+            color: black;
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+            .fineprint a {
+                color: black;
+            }
+                        /* ### fix adbox */
+        .adbox {
+            background-color: lightgray;
+            height: 125px;
+            width: 350px;
+            
+            color: rgb(54, 54, 54);
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            
+
+            display: flex;                      /* parent properties*/
+            flow-flex: row nowrap;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+            .adbox > div {
+                border:2px solid red;
+            }
+            .adimage {
+                
+                max-height: 100px;
+                max-width: 100px;
+                
+                flex:1;
+            }
+            .ad {
+                color: black;
+                text-decoration: none;
+                font-size: 12px;
+
+                display: flex;
+                /* flow-flex: nowrap; */
+                /* justify-content: space-evenly; */
+
+                flex:1;
+            }
+        /* box  */
+        div > h2 {
+            font-size: 42px; 
+            /* color: rgb(54, 54, 54); */
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        .summary {
+            font-size: 20px; 
+            color: rgb(54, 54, 54);
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        .details {
+            font-size: 16px; 
+            color: rgb(54, 54, 54);
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            margin-right: 35px !important;
+        }
+
+
+    /* ---- footer -----  ### fine tune the spacing */
+    footer {
+        background-color: whitesmoke;
+        max-width: 100%;
+        min-width: 50%;
+        padding: 25px;
+
+        display: flex;
         flex-flow: column nowrap;
     }
-        .boxmain-one > div {
-            /* background-color: rgb(208, 222, 176); */
-            border: 1px solid rgb(3, 5, 138);
-            width: 100%;
-            margin-right: 15px;
-            padding: 5px;
-            
-            flex: 1;                            /* child props */
-        }
-        .boxmain-one > .mainbuttons {
-            /* background-color: rgb(208, 222, 176); */
-            /* border: 1px solid rgb(3, 5, 138); */
-            width: 100%;
-            margin-right: 15px;
-            padding: 5px;
-            
-            flex: 1;                            /* child props */
-                    
-            display: flex;                      /*parent props*/
-            /* flex-flow: row nowrap; */
-        }
-    .boxmain-two {
-        border: 1px solid rgb(0, 255, 21);
-        width: 100%;
-
-        flex: 1;                           /* child props */
-    }
-
- /* ----- TYP container sections */
- section {                 
-    background-color: lightblue;    
-    width: 100%
-    max-width: 600px;
-    /* margin: 0 auto; */
-    padding-top: 5%;
-    padding-bottom: 5%;
-
-    display: flex;                      /*parent props*/
-    flex-flow: row wrap;
- }
-    .one {
-        /* background-color: lightsteelblue; */
-        width: 100%;
-        margin-right: 15px;
-        padding: 5px;
-        
-        flex: 1;
-    }
-    .two {
-        /* background-color: lightslategrey; */
-        /* border: 1px solid rgb(0, 255, 21); */
-        width: 100%;
-
-        flex: 1;                           /* child props */
-    }
-    .two img {
-        /* border: 1px solid black; */
-        width: 100%;
-        height: auto;
-        padding-top: 25px
-    }
-    .one > div {               /* nesting child properties -> all div children of a class one*/       
-        /* border: 1px solid red; */
-        margin-right: 15px;
-        padding: 5px;
-        flex: 1;
-
-        display: flex;                      /*parent props*/
-        flex-flow: row wrap-reverse ;
-    } 
-    .code {          /* install and deliver code box container */
-        background-color: lightyellow;
-        border: 1px solid rgb(0, 255, 21);
-        /* padding: 125x 0px 25px 0px; */
-        /* margin: 25x 0px 25px 0px; */
-        flex: 1;                           /* child props */
-
-        display: flex;                      /*parent props*/
-        flex-flow: column wrap;
-        
-    }
-        .codecopy {                   
-            background-color:whitesmoke;
-            /* padding: 10px; */
-            /* margin: 10px; */
+        footer ul {
+            /* border: 1px solid purple; */
+            list-style-type: none;
 
             flex: 1;                           /* child props */
 
-            display: flex;                      /*parent props*/
-            justify-content: space-between;
+            display: flex;                      /* parent props */
+            flex-flow: row nowrap;
+            /* justify-content: flex-start; */
         }
-                .codecopy code {                   
-                    /* padding: 3px 30px 3px 5px; */
-                    flex: 1;                           /* child props */
-                }
-                .codecopy script {                   
-                    /* padding: 3px 30px 3px 5px; */
-                    flex: 1; 
-                    overflow: scroll                          /* child props */;
-                }
-                .codecopy button {    
-                    background-color: white;   
-                    border: 1px solid rgb(8, 8, 250);
-                    border-radius: 5px;
-
-                    /* padding: 3px 30px 3px 5px; */
-                    flex: 1;                           /* child props */
-                }
-
- /* ---- flexbox class properties  */
-    /* main banner */
-    .tagline {
-        font-size: 48px; 
-        color: rgb(54, 54, 54);
-        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    }
-    .mainsummary {
-        font-size: 28px; 
-        color: rgb(54, 54, 54);
-        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    }
-    /* TYP containers  */
-    div > h2 {
-        font-size: 42px; 
-        /* color: rgb(54, 54, 54); */
-        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    }
-    .summary {
-        font-size: 20px; 
-        color: rgb(54, 54, 54);
-        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    }
-    .details {
-        font-size: 16px; 
-        color: rgb(54, 54, 54);
-        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-        margin-right: 35px !important;
-    }
-    .boxbutton {
-        margin-right: 250px !important;
-        text-align: center;
-
-        font-size: 20px; 
-        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-
-        border: 1px solid rgb(8, 8, 250);
-        border-radius: 5px;
-    }  
-        .boxbutton a:link {
-            color: rgb(8, 8, 250);
-            text-decoration: none;
+        footer ul a {
+            /* border: 1px solid rgb(0, 255, 21); */
+            color: rgb(54, 54, 54);
+            font-size: 16px;
+            /* text-align: center; */
+            display: block;
+            padding: 10px;
         }
-        .boxbutton a:visited {
-            color: rgb(8, 8, 250);
+        footer div {
+            /* border: 1px solid purple; */
+            color: rgb(54, 54, 54);
+            font-size: 14px;
+            padding-left: 2.5%;
+
+            
+            flex: 1;                           /* child props */
         }
-        .boxbutton a:hover {
-            color: white;
-            background-color: rgb(8, 8, 250);
+        footer div a {
+            /* border: 1px solid rgb(0, 255, 21); */
+            color: rgb(54, 54, 54);
+            font-size: 14px;
         }
-
- /* ### Fine-tune the buttons */
-
-/* ---- footer ----- */
- footer {
-    background-color: whitesmoke;
-    max-width: 100%;
-    min-width: 50%;
-    padding: 35px ;
-
-    display: flex;
-    flex-flow: column nowrap;
- }
-    footer ul {
-        /* border: 1px solid purple; */
-        list-style-type: none;
-
-        flex: 1;                           /* child props */
-
-        display: flex;                      /* parent props */
-        flex-flow: row nowrap;
-        /* justify-content: flex-start; */
-    }
-    footer ul a {
-        /* border: 1px solid rgb(0, 255, 21); */
-        color: rgb(54, 54, 54);
-        font-size: 16px;
-        /* text-align: center; */
-        display: block;
-        padding: 10px;
-    }
-    footer div {
-        /* border: 1px solid purple; */
-        color: rgb(54, 54, 54);
-        font-size: 14px;
-        padding-left: 2.5%;
-
-        
-        flex: 1;                           /* child props */
-    }
-    footer div a {
-        /* border: 1px solid rgb(0, 255, 21); */
-        color: rgb(54, 54, 54);
-        font-size: 14px;
-    }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
